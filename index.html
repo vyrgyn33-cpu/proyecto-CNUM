@@ -1,123 +1,198 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colegio Naciones Unidas del Mundo | Inicio</title>
-    <link rel="stylesheet" href="vista/estilo/estilo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colegio Naciones Unidas del Mundo | Inicio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="vista/estilo/estilo.css" />
 </head>
 <body>
 
-<header>
-    <div class="container header-flex">
-        <div class="logo">
-            <img src="vista/multimedial/logoCnum.jpg" alt="Logo Colegio" onerror="this.src='https://placehold.co/60x60?text=CNUM'">
-            <div>
-                <h1>Colegio Naciones Unidas del Mundo</h1>
-                <p>En Busca de la excelencia educativa</p>
-            </div>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="vista/paginas/propuesta.html">Propuesta Educativa</a></li>
-                <li><a href="vista/paginas/niveles.html">Niveles</a></li>
-                <li><a href="vista/paginas/proyectos.html">Proyectos</a></li>
-                <li><a href="vista/paginas/novedades.html">Novedades</a></li>
-                <li><a href="vista/paginas/contacto.html">Contacto</a></li>
-                <li><a href="vista/paginas/campus.html" class="btn-login-nav"><i class="fas fa-user"></i> Campus</a></li>
-            </ul>
-            <div class="hamburger"><i class="fas fa-bars"></i></div>
-        </nav>
+  <!-- ── NAVBAR ────────────────────────────────────────────── -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="https://vyrgyn33-cpu.github.io/proyecto-CNUM/vista/multimedial/logoCnum.jpg" alt="Logo CNUM" />
+      <div class="brand-text">
+        <span class="nombre">Colegio Naciones Unidas del Mundo</span>
+        <span class="slogan">Excelencia educativa</span>
+      </div>
     </div>
-</header>
+    <ul class="navbar-links">
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="vista/paginas/propuesta.html">Propuesta</a></li>
+      <li><a href="vista/paginas/niveles.html">Niveles</a></li>
+      <li><a href="vista/paginas/proyectos.html">Proyectos</a></li>
+      <li><a href="vista/paginas/novedades.html">Novedades</a></li>
+      <li><a href="vista/paginas/campus.html">Campus</a></li>
+      <li><a href="vista/paginas/contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
 
-<main>
-    <!-- Hero exactamente como en tu imagen -->
-    <section class="hero">
-        <div class="container hero-content">
-            <span class="hero-tag">Escuela Inicial, Primaria y Secundaria</span>
-            <h2>Formamos líderes con tecnología y valores</h2>
-            <p>Más de 20 años construyendo un futuro con sólida articulación tecnológica, deportiva y humana.</p>
-            <div class="hero-buttons">
-                <a href="vista/paginas/propuesta.html" class="btn btn-primary">Conoce nuestra propuesta</a>
-                <a href="vista/paginas/contacto.html" class="btn btn-outline">Contactar</a>
-            </div>
-        </div>
-    </section>
+  <!-- ── HERO ──────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Escuela Inicial · Primaria · Secundaria</div>
+      <img
+        class="hero-logo"
+        src="https://vyrgyn33-cpu.github.io/proyecto-CNUM/vista/multimedial/logoCnum.jpg"
+        alt="Logo Colegio Naciones Unidas del Mundo"
+      />
+      <h1 class="hero-title">
+        Colegio <span>Naciones Unidas</span><br/>del Mundo
+      </h1>
+      <p class="hero-sub">
+        Más de 20 años formando líderes con tecnología, valores humanos y excelencia educativa.
+      </p>
+      <div class="hero-btns">
+        <a href="vista/paginas/propuesta.html" class="btn-primary">Nuestra propuesta</a>
+        <a href="vista/paginas/contacto.html" class="btn-outline">Contactar</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Explorar</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-    <!-- Sección de bienvenida / resumen de niveles (opcional, pero hace más completa la home) -->
-    <section class="niveles-home">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nuestros Niveles</h2>
-                <p>Una formación gradual y personalizada</p>
-            </div>
-            <div class="niveles-grid">
-                <div class="nivel-card">
-                    <i class="fas fa-child"></i>
-                    <h3>Inicial</h3>
-                    <p>Estimulación temprana, juego, arte y primeros acercamientos a la tecnología.</p>
-                    <a href="vista/paginas/inicial.html" class="btn-nivel">Saber más →</a>
-                </div>
-                <div class="nivel-card">
-                    <i class="fas fa-book-open"></i>
-                    <h3>Primaria</h3>
-                    <p>Alfabetización integral, inglés, computación y proyectos colaborativos.</p>
-                    <a href="vista/paginas/primaria.html" class="btn-nivel">Saber más →</a>
-                </div>
-                <div class="nivel-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Secundario</h3>
-                    <p>Orientación en Tecnologías de la Información, prácticas profesionalizantes y robótica.</p>
-                    <a href="vista/paginas/secundario.html" class="btn-nivel">Saber más →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
+  <!-- ── STATS ─────────────────────────────────────────────── -->
+  <div class="stats-band">
+    <div class="stat-item">
+      <div class="stat-number">+20</div>
+      <div class="stat-label">Años de trayectoria</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">3</div>
+      <div class="stat-label">Niveles educativos</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Articulación tecnológica</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">∞</div>
+      <div class="stat-label">Compromiso con valores</div>
+    </div>
+  </div>
 
-<footer>
-    <div class="container footer-grid">
-        <div class="footer-col">
-            <img src="vista/multimedial/logoCnum.jpg" alt="Logo" onerror="this.src='https://placehold.co/80x80'" style="width: 80px;">
-            <p>Colegio Naciones Unidas del Mundo<br>Excelencia educativa con valores y tecnología.</p>
+  <!-- ── NIVELES ────────────────────────────────────────────── -->
+  <main>
+    <div class="section">
+      <div class="section-header">
+        <span class="section-tag">Formación integral</span>
+        <h2 class="section-title">Niveles educativos</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Una propuesta pedagógica continua desde los primeros años hasta el egreso</p>
+      </div>
+      <div class="levels-grid">
+        <!-- Inicial -->
+        <div class="level-card">
+          <div class="level-card-top">
+            <div class="level-num">01</div>
+            <div class="level-icon">🎨</div>
+            <h3>Educación Inicial</h3>
+            <div class="level-age">2 a 5 años</div>
+          </div>
+          <div class="level-card-body">
+            <p>Estimulación temprana, juego y desarrollo emocional. Inglés inicial, psicomotricidad y arte. Acompañamiento personalizado en un entorno cálido y seguro.</p>
+            <a href="vista/paginas/niveles.html#inicial" class="level-link">Conocer más →</a>
+          </div>
         </div>
-        <div class="footer-col">
-            <h4>Enlaces</h4>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="vista/paginas/propuesta.html">Propuesta Educativa</a></li>
-                <li><a href="vista/paginas/niveles.html">Niveles</a></li>
-                <li><a href="vista/paginas/proyectos.html">Proyectos</a></li>
-                <li><a href="vista/paginas/novedades.html">Novedades</a></li>
-                <li><a href="vista/paginas/contacto.html">Contacto</a></li>
-                <li><a href="vista/paginas/campus.html">Campus</a></li>
-            </ul>
+        <!-- Primaria -->
+        <div class="level-card">
+          <div class="level-card-top">
+            <div class="level-num">02</div>
+            <div class="level-icon">📚</div>
+            <h3>Educación Primaria</h3>
+            <div class="level-age">6 a 11 años</div>
+          </div>
+          <div class="level-card-body">
+            <p>Alfabetización profunda, robótica educativa, pensamiento computacional, valores y convivencia. Proyectos interdisciplinarios y segundo idioma.</p>
+            <a href="vista/paginas/niveles.html#primaria" class="level-link">Conocer más →</a>
+          </div>
         </div>
-        <div class="footer-col">
-            <h4>Contacto</h4>
-            <p><i class="fas fa-envelope"></i> contacto@num.edu.ar</p>
-            <p><i class="fas fa-phone-alt"></i> +54 11 1234-5678</p>
-            <p><i class="fas fa-map-marker-alt"></i> Ciudad Autónoma de Buenos Aires</p>
+        <!-- Secundaria -->
+        <div class="level-card">
+          <div class="level-card-top">
+            <div class="level-num">03</div>
+            <div class="level-icon">🌍</div>
+            <h3>Educación Secundaria</h3>
+            <div class="level-age">12 a 17 años</div>
+          </div>
+          <div class="level-card-body">
+            <p>Bachillerato internacional, orientación en ciencias sociales y tecnología, pasantías, simulación ONU, preparación universitaria y liderazgo.</p>
+            <a href="vista/paginas/niveles.html#secundaria" class="level-link">Conocer más →</a>
+          </div>
         </div>
-        <div class="footer-col">
-            <h4>Seguinos</h4>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ── SECCIÓN PROPUESTA ──────────────────────────────────── -->
+  <section class="propuesta-section">
+    <div class="propuesta-inner">
+      <div class="propuesta-text">
+        <span class="section-tag">Nuestro sello</span>
+        <h2 class="section-title">Más que un colegio,<br/>una comunidad global</h2>
+        <p class="propuesta-desc">
+          En Colegio Naciones Unidas del Mundo integramos tecnología de vanguardia, 
+          formación en valores humanos y un enfoque multicultural. Preparamos a 
+          nuestros estudiantes para los desafíos del siglo XXI con pensamiento crítico, 
+          empatía y excelencia académica.
+        </p>
+        <div class="propuesta-features">
+          <div class="feat-item"><div class="feat-dot"></div><p>Plan bilingüe intensivo (inglés desde los 2 años)</p></div>
+          <div class="feat-item"><div class="feat-dot"></div><p>Laboratorio de innovación y robótica</p></div>
+          <div class="feat-item"><div class="feat-dot"></div><p>Acompañamiento psicopedagógico y orientación vocacional</p></div>
+          <div class="feat-item"><div class="feat-dot"></div><p>Intercambios culturales y proyecto “Modelo de Naciones Unidas”</p></div>
         </div>
+      </div>
+      <div class="propuesta-visual">
+        <div class="value-card"><h4>🤝 Respeto</h4><p>Base de la convivencia democrática y el diálogo intercultural.</p></div>
+        <div class="value-card"><h4>💡 Innovación</h4><p>Aulas activas, metodologías ágiles y alfabetización digital.</p></div>
+        <div class="value-card"><h4>🌱 Compromiso</h4><p>Con la comunidad y el medio ambiente, forjando ciudadanía responsable.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────────── -->
+  <div class="cta-section">
+    <h2 class="section-title">¿Listo para formar parte?</h2>
+    <p>Solicitá una entrevista personalizada o recorré nuestro campus virtual.</p>
+    <a href="vista/paginas/contacto.html" class="cta-btn">Inscribite ahora</a>
+  </div>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-gold-bar"></div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <img src="https://vyrgyn33-cpu.github.io/proyecto-CNUM/vista/multimedial/logoCnum.jpg" alt="Logo" />
+          <span class="nombre">Colegio Naciones Unidas del Mundo</span>
+        </div>
+        <p>Formando líderes con conciencia global, innovación y calidez humana desde 2003.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="vista/paginas/propuesta.html">Propuesta educativa</a></li>
+          <li><a href="vista/paginas/niveles.html">Niveles</a></li>
+          <li><a href="vista/paginas/proyectos.html">Proyectos</a></li>
+          <li><a href="vista/paginas/novedades.html">Novedades</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <div class="contact-item">📞 +54 11 2345 6789</div>
+        <div class="contact-item">✉️ info@colegionacionesunidas.edu</div>
+        <div class="contact-item">📍 Av. Libertador 1234, CABA, Argentina</div>
+      </div>
     </div>
     <div class="footer-bottom">
-        <p>Colegio Naciones Unidas del Mundo - Todos los derechos reservados</p>
+      <p>© 2025 Colegio Naciones Unidas del Mundo – Todos los derechos reservados</p>
+      <p>Diseño institucional · Excelencia educativa</p>
     </div>
-</footer>
-
-<!-- ✅ MAIN.JS justo antes de cerrar body -->
-<script src="vista/js/main.js"></script>
+  </footer>
 </body>
 </html>
