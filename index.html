@@ -2,268 +2,122 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Colegio Naciones Unidas del Mundo | Inicial, Primaria y Secundaria</title>
-    <!-- CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio Naciones Unidas del Mundo | Inicio</title>
     <link rel="stylesheet" href="vista/estilo/estilo.css">
-    <!-- Font Awesome 6 (iconos) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- ==================== HEADER / NAVEGACIÓN ==================== -->
-    <header>
-        <div class="container header-flex">
-            <div class="logo">
-                <img src="vista/multimedial/logoCnum.jpg" alt="Logo Colegio Naciones Unidas del Mundo" onerror="this.src='https://placehold.co/60x60?text=CNUM'">
-                <div>
-                    <h1>Colegio Naciones Unidas del Mundo</h1>
-                    <p>En Busca de la excelencia educativa</p>
-                </div>
+<header>
+    <div class="container header-flex">
+        <div class="logo">
+            <img src="vista/multimedial/logoCnum.jpg" alt="Logo Colegio" onerror="this.src='https://placehold.co/60x60?text=CNUM'">
+            <div>
+                <h1>Colegio Naciones Unidas del Mundo</h1>
+                <p>En Busca de la excelencia educativa</p>
             </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#propuesta">Propuesta Educativa</a></li>
-                    <li><a href="#niveles">Niveles</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#novedades">Novedades</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="#login" class="btn-login-nav"><i class="fas fa-user"></i> Campus</a></li>
-                </ul>
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
         </div>
-    </header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="vista/paginas/propuesta.html">Propuesta Educativa</a></li>
+                <li><a href="vista/paginas/niveles.html">Niveles</a></li>
+                <li><a href="vista/paginas/proyectos.html">Proyectos</a></li>
+                <li><a href="vista/paginas/novedades.html">Novedades</a></li>
+                <li><a href="vista/paginas/contacto.html">Contacto</a></li>
+                <li><a href="vista/paginas/campus.html" class="btn-login-nav"><i class="fas fa-user"></i> Campus</a></li>
+            </ul>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </nav>
+    </div>
+</header>
 
-    <main>
-        <!-- ==================== HERO ==================== -->
-        <section id="inicio" class="hero">
-            <div class="container hero-content">
-                <span class="hero-tag">Escuela Inicial, Primaria y Secundaria</span>
-                <h2>Formamos líderes con tecnología y valores</h2>
-                <p>Más de 20 años construyendo un futuro con sólida articulación tecnológica, deportiva y humana.</p>
-                <div class="hero-buttons">
-                    <a href="#propuesta" class="btn btn-primary">Conoce nuestra propuesta</a>
-                    <a href="#contacto" class="btn btn-outline">Contactar</a>
-                </div>
+<main>
+    <!-- Hero exactamente como en tu imagen -->
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="hero-tag">Escuela Inicial, Primaria y Secundaria</span>
+            <h2>Formamos líderes con tecnología y valores</h2>
+            <p>Más de 20 años construyendo un futuro con sólida articulación tecnológica, deportiva y humana.</p>
+            <div class="hero-buttons">
+                <a href="vista/paginas/propuesta.html" class="btn btn-primary">Conoce nuestra propuesta</a>
+                <a href="vista/paginas/contacto.html" class="btn btn-outline">Contactar</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ==================== ROBÓTICA DESTACADA ==================== -->
-        <section class="robotics-highlight">
-            <div class="container">
-                <div class="robotics-grid">
-                    <div class="robotics-text">
-                        <span class="section-mini">+ Tecnología</span>
-                        <h3>Robótica educativa</h3>
-                        <p>Desde nivel inicial hasta secundaria, integramos la robótica y la programación como herramientas transversales. Los alumnos desarrollan pensamiento computacional, trabajo en equipo y creatividad.</p>
-                        <a href="#" class="read-more">Conocer más →</a>
-                    </div>
-                    <div class="robotics-img">
-                        <img src="vista/multimedia/bot.jpeg" alt="Taller de robótica" onerror="this.src='https://placehold.co/500x300?text=Robótica'">
-                    </div>
-                </div>
+    <!-- Sección de bienvenida / resumen de niveles (opcional, pero hace más completa la home) -->
+    <section class="niveles-home">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Niveles</h2>
+                <p>Una formación gradual y personalizada</p>
             </div>
-        </section>
-
-        <!-- ==================== PROPUESTA EDUCATIVA ==================== -->
-        <section id="propuesta" class="propuesta">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Propuesta Educativa</h2>
-                    <p>Una educación diferente, orientada al futuro</p>
+            <div class="niveles-grid">
+                <div class="nivel-card">
+                    <i class="fas fa-child"></i>
+                    <h3>Inicial</h3>
+                    <p>Estimulación temprana, juego, arte y primeros acercamientos a la tecnología.</p>
+                    <a href="vista/paginas/inicial.html" class="btn-nivel">Saber más →</a>
                 </div>
-                <div class="propuesta-cards">
-                    <div class="card">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h4>Articulación entre niveles</h4>
-                        <p>Transición fluida desde Inicial a Secundaria en un ambiente familiar y contenedor.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-microchip"></i>
-                        <h4>Tecnología orientada al empleo y universidad</h4>
-                        <p>Prácticas de oficina, diseño, programación y robótica en el ciclo superior.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-futbol"></i>
-                        <h4>Eventos deportivos intercolegiales</h4>
-                        <p>Desarrollo integral del cuerpo, competencias deportivas y vida saludable.</p>
-                    </div>
+                <div class="nivel-card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Primaria</h3>
+                    <p>Alfabetización integral, inglés, computación y proyectos colaborativos.</p>
+                    <a href="vista/paginas/primaria.html" class="btn-nivel">Saber más →</a>
                 </div>
-            </div>
-        </section>
-
-        <!-- ==================== NIVELES (Inicial, Primaria, Secundario) ==================== -->
-        <section id="niveles" class="niveles">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Niveles educativos</h2>
-                    <p>Una formación gradual y personalizada</p>
-                </div>
-                <div class="niveles-grid">
-                    <div class="nivel-card">
-                        <div class="nivel-icon"><i class="fas fa-child"></i></div>
-                        <h3>Inicial</h3>
-                        <p>Estimulación temprana, juego, arte y primeros acercamientos a la tecnología.</p>
-                        <a href="#" class="btn-nivel">Saber más</a>
-                    </div>
-                    <div class="nivel-card">
-                        <div class="nivel-icon"><i class="fas fa-book-open"></i></div>
-                        <h3>Primaria</h3>
-                        <p>Alfabetización integral, inglés, computación y proyectos colaborativos.</p>
-                        <a href="#" class="btn-nivel">Saber más</a>
-                    </div>
-                    <div class="nivel-card">
-                        <div class="nivel-icon"><i class="fas fa-laptop-code"></i></div>
-                        <h3>Secundario</h3>
-                        <p>Orientación en Tecnologías de la Información, prácticas profesionalizantes y robótica.</p>
-                        <a href="#" class="btn-nivel">Saber más</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== PROYECTOS (Música, Computación, Arte, Naturaleza) ==================== -->
-        <section id="proyectos" class="proyectos">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Proyectos especiales</h2>
-                    <p>Música - Computación - Arte - Vida en la Naturaleza</p>
-                </div>
-                <div class="proyectos-grid">
-                    <div class="proyecto-item">
-                        <i class="fas fa-music"></i>
-                        <h4>Música</h4>
-                        <p>Coro, banda y expresión artística.</p>
-                    </div>
-                    <div class="proyecto-item">
-                        <i class="fas fa-desktop"></i>
-                        <h4>Computación</h4>
-                        <p>Desde robótica hasta ofimática avanzada.</p>
-                    </div>
-                    <div class="proyecto-item">
-                        <i class="fas fa-palette"></i>
-                        <h4>Arte</h4>
-                        <p>Plástica, diseño y creatividad.</p>
-                    </div>
-                    <div class="proyecto-item">
-                        <i class="fas fa-leaf"></i>
-                        <h4>Vida en la Naturaleza</h4>
-                        <p>Huerta, reciclaje y conciencia ecológica.</p>
-                    </div>
-                </div>
-                <div class="info-adicional">
-                    <div class="info-block">
-                        <i class="fas fa-keyboard"></i>
-                        <h5>Informática</h5>
-                        <p>Artículos con áreas curriculares para el desarrollo de tareas.</p>
-                    </div>
-                    <div class="info-block">
-                        <i class="fas fa-briefcase"></i>
-                        <h5>Prácticas de Oficina</h5>
-                        <p>Desarrollo de habilidades informáticas para el futuro campo laboral.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== NOVEDADES (Blog estilo noticias) ==================== -->
-        <section id="novedades" class="novedades">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Novedades</h2>
-                    <p>Últimas noticias de nuestra comunidad</p>
-                </div>
-                <div class="novedades-grid">
-                    <article class="noticia">
-                        <span class="fecha"><i class="far fa-calendar-alt"></i> 7 enero, 2021</span>
-                        <h4>Los cambios que prepara la escuela......</h4>
-                        <p>Estamos renovando instalaciones y metodologías para este nuevo ciclo lectivo. ¡Pronto más información!</p>
-                        <a href="#" class="read-more">Leer más →</a>
-                    </article>
-                    <article class="noticia">
-                        <span class="fecha"><i class="far fa-calendar-alt"></i> 8 enero, 2021</span>
-                        <h4>Horarios de atención de Administración</h4>
-                        <p>De Lunes a Viernes hábiles de 8 a 17 hs. Consultas por inscripciones abiertas.</p>
-                        <a href="#" class="read-more">Leer más →</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== LOGIN / CAMPUS ==================== -->
-        <section id="login" class="login-section">
-            <div class="container login-container">
-                <div class="login-card">
-                    <i class="fas fa-university"></i>
-                    <h3>Inicio de Sesión</h3>
-                    <p>Acceso a Campus Virtual para alumnos, docentes y familias</p>
-                    <form action="#" method="post">
-                        <div class="input-group">
-                            <label>Nombre de usuario o correo electrónico</label>
-                            <input type="text" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Contraseña</label>
-                            <input type="password" required>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="remember">
-                            <label for="remember">Recordarme</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
-                        <div class="login-footer">
-                            <a href="#">¿Olvidaste tu contraseña?</a>
-                            <a href="#">← Ir a inicio</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- ==================== FOOTER ==================== -->
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <img src="vista/multimedial/logoCnum.jpg" alt="Logo" onerror="this.src='https://placehold.co/80x80?text=CNUM'" style="width: 80px;">
-                <p>Colegio Naciones Unidas del Mundo<br>Excelencia educativa con valores y tecnología.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Enlaces</h4>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#propuesta">Propuesta Educativa</a></li>
-                    <li><a href="#campus">Campus</a></li>
-                    <li><a href="#contacto">Contáctanos</a></li>
-                    <li><a href="#login">Autenticación</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contacto</h4>
-                <p><i class="fas fa-envelope"></i> contacto@num.edu.ar</p>
-                <p><i class="fas fa-phone-alt"></i> +54 11 1234-5678</p>
-                <p><i class="fas fa-map-marker-alt"></i> Ciudad Autónoma de Buenos Aires</p>
-            </div>
-            <div class="footer-col">
-                <h4>Seguinos</h4>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                <div class="nivel-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Secundario</h3>
+                    <p>Orientación en Tecnologías de la Información, prácticas profesionalizantes y robótica.</p>
+                    <a href="vista/paginas/secundario.html" class="btn-nivel">Saber más →</a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>Developed by Think Up Themes Ltd. Powered by WordPress. | Colegio Naciones Unidas del Mundo - Todos los derechos reservados</p>
-        </div>
-    </footer>
+    </section>
+</main>
 
-    <script src="vista/js/main.js"></script>
+<footer>
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <img src="vista/multimedial/logoCnum.jpg" alt="Logo" onerror="this.src='https://placehold.co/80x80'" style="width: 80px;">
+            <p>Colegio Naciones Unidas del Mundo<br>Excelencia educativa con valores y tecnología.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="vista/paginas/propuesta.html">Propuesta Educativa</a></li>
+                <li><a href="vista/paginas/niveles.html">Niveles</a></li>
+                <li><a href="vista/paginas/proyectos.html">Proyectos</a></li>
+                <li><a href="vista/paginas/novedades.html">Novedades</a></li>
+                <li><a href="vista/paginas/contacto.html">Contacto</a></li>
+                <li><a href="vista/paginas/campus.html">Campus</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p><i class="fas fa-envelope"></i> contacto@num.edu.ar</p>
+            <p><i class="fas fa-phone-alt"></i> +54 11 1234-5678</p>
+            <p><i class="fas fa-map-marker-alt"></i> Ciudad Autónoma de Buenos Aires</p>
+        </div>
+        <div class="footer-col">
+            <h4>Seguinos</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Colegio Naciones Unidas del Mundo - Todos los derechos reservados</p>
+    </div>
+</footer>
+
+<!-- ✅ MAIN.JS justo antes de cerrar body -->
+<script src="vista/js/main.js"></script>
 </body>
 </html>
