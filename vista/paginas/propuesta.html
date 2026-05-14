@@ -1,89 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propuesta Educativa | Colegio Naciones Unidas del Mundo</title>
-    <link rel="stylesheet" href="vista/estilo/estilo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propuesta Educativa | Colegio Naciones Unidas del Mundo</title>
+  <link rel="stylesheet" href="vista/estilo/estilo.css"/>
+  <style>
+    .propuesta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-bottom: 5rem; }
+    .propuesta-desc { font-size: 1rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 1.5rem; }
+    .feat-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+    .feat-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; background: var(--white); border-radius: 4px; border-left: 3px solid var(--gold); box-shadow: 0 2px 10px rgba(74,15,28,0.06); }
+    .feat-dot { width: 8px; height: 8px; min-width: 8px; border-radius: 50%; background: var(--bordo); margin-top: 6px; }
+    .feat-item p { font-size: 0.92rem; color: var(--text-mid); line-height: 1.6; }
+    .pilares-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .pilar-card { background: var(--bordo-dark); border-radius: 6px; padding: 2rem; position: relative; overflow: hidden; }
+    .pilar-card::before { content: ''; position: absolute; right: -15px; bottom: -15px; width: 80px; height: 80px; border-radius: 50%; background: rgba(201,168,76,0.1); }
+    .pilar-card .icon { font-size: 2rem; margin-bottom: 0.8rem; }
+    .pilar-card h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+    .pilar-card p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+    .mision-section { background: var(--bordo); border-radius: 8px; padding: 4rem; text-align: center; margin-top: 5rem; position: relative; overflow: hidden; }
+    .mision-section::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(201,168,76,0.04) 40px, rgba(201,168,76,0.04) 41px); }
+    .mision-section * { position: relative; z-index: 1; }
+    .mision-section h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--white); margin-bottom: 1.2rem; }
+    .mision-section p { font-size: 1.05rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 2rem; line-height: 1.8; }
+    @media (max-width: 900px) { .propuesta-grid { grid-template-columns: 1fr; gap: 2rem; } .pilares-grid { grid-template-columns: 1fr; } .mision-section { padding: 2.5rem 1.5rem; } }
+  </style>
 </head>
 <body>
 
-<header>
-    <div class="container header-flex">
-        <div class="logo">
-            <img src="vista/multimedial/logoCnum.jpg" alt="Logo" onerror="this.src='https://placehold.co/60x60'">
-            <div>
-                <h1>Colegio Naciones Unidas del Mundo</h1>
-                <p>En Busca de la excelencia educativa</p>
-            </div>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="propuesta.html">Propuesta Educativa</a></li>
-                <li><a href="niveles.html">Niveles</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="novedades.html">Novedades</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="campus.html" class="btn-login-nav"><i class="fas fa-user"></i> Campus</a></li>
-            </ul>
-            <div class="hamburger"><i class="fas fa-bars"></i></div>
-        </nav>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="https://vyrgyn33-cpu.github.io/proyecto-CNUM/vista/multimedial/logoCnum.jpg" alt="Logo CNUM" />
+      <div class="brand-text">
+        <span class="nombre">Colegio Naciones Unidas del Mundo</span>
+        <span class="slogan">Excelencia educativa</span>
+      </div>
     </div>
-</header>
+    <ul class="navbar-links">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="propuesta.html" class="active">Propuesta</a></li>
+      <li><a href="niveles.html">Niveles</a></li>
+      <li><a href="proyectos.html">Proyectos</a></li>
+      <li><a href="novedades.html">Novedades</a></li>
+      <li><a href="campus.html">Campus</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
 
-<main class="page-content">
-    <div class="container">
-        <h2>Propuesta Educativa</h2>
-        <p>En el Colegio Naciones Unidas del Mundo ofrecemos una educación integral con fuerte énfasis en tecnología, deportes y valores humanos. Nuestra propuesta se basa en:</p>
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span class="page-eyebrow">Quiénes somos</span>
+      <h1>Propuesta Educativa</h1>
+      <p>Una formación integral que combina tecnología, valores humanos y excelencia académica.</p>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+
+  <div class="page-content">
+
+    <div class="propuesta-grid">
+      <div>
+        <span class="section-tag">Nuestra visión</span>
+        <h2 class="section-title">Educación integral para el mundo de hoy</h2>
+        <div class="section-divider"></div>
+        <p class="propuesta-desc">En el Colegio Naciones Unidas del Mundo ofrecemos una educación integral con fuerte énfasis en tecnología, deportes y valores humanos. Nuestra propuesta se basa en la articulación continua entre todos los niveles educativos.</p>
+        <p class="propuesta-desc">Buscamos formar líderes con pensamiento crítico, creatividad y compromiso social, preparados para los desafíos del siglo XXI.</p>
+        <div class="feat-list">
+          <div class="feat-item"><div class="feat-dot"></div><p>Articulación entre niveles Inicial, Primario y Secundario.</p></div>
+          <div class="feat-item"><div class="feat-dot"></div><p>Educación tecnológica orientada al empleo y al ámbito universitario.</p></div>
+          <div class="feat-item"><div class="feat-dot"></div><p>Eventos deportivos y competencias intercolegiales.</p></div>
+          <div class="feat-item"><div class="feat-dot"></div><p>Proyectos de robótica, música, arte y vida en la naturaleza.</p></div>
+          <div class="feat-item"><div class="feat-dot"></div><p>Inglés desde el nivel inicial con metodología inmersiva.</p></div>
+        </div>
+      </div>
+
+      <div class="pilares-grid">
+        <div class="pilar-card">
+          <div class="icon">💻</div>
+          <h4>Tecnología</h4>
+          <p>Laboratorios equipados, robótica y programación desde el nivel inicial.</p>
+        </div>
+        <div class="pilar-card">
+          <div class="icon">🤝</div>
+          <h4>Valores</h4>
+          <p>Solidaridad, respeto y ciudadanía como pilares de nuestra comunidad.</p>
+        </div>
+        <div class="pilar-card">
+          <div class="icon">⚽</div>
+          <h4>Deporte</h4>
+          <p>Competencias, trabajo en equipo y hábitos de vida saludable.</p>
+        </div>
+        <div class="pilar-card">
+          <div class="icon">🎨</div>
+          <h4>Arte</h4>
+          <p>Música, teatro, plástica y creatividad aplicada a todas las áreas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mision-section">
+      <h2>Nuestra Misión</h2>
+      <p>Formar personas íntegras, críticas y comprometidas, capaces de transformar su entorno con herramientas tecnológicas y valores humanos sólidos.</p>
+      <a href="contacto.html" class="btn-gold">Contactar al colegio</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-gold-bar"></div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <img src="https://vyrgyn33-cpu.github.io/proyecto-CNUM/vista/multimedial/logoCnum.jpg" alt="Logo CNUM" />
+          <div class="nombre">Colegio Naciones Unidas del Mundo</div>
+        </div>
+        <p>Excelencia educativa con valores, tecnología y compromiso humano.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
         <ul>
-            <li>Articulación entre niveles Inicial, Primario y Secundario.</li>
-            <li>Educación tecnológica orientada al empleo y al ámbito universitario.</li>
-            <li>Eventos deportivos y competencias intercolegiales.</li>
-            <li>Proyectos de robótica, música, arte y vida en la naturaleza.</li>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="propuesta.html">Propuesta Educativa</a></li>
+          <li><a href="niveles.html">Niveles</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="novedades.html">Novedades</a></li>
+          <li><a href="campus.html">Campus</a></li>
         </ul>
-        <p>Buscamos formar líderes con pensamiento crítico, creatividad y compromiso social.</p>
-    </div>
-</main>
-
-<footer>
-    <div class="container footer-grid">
-        <div class="footer-col">
-            <img src="vista/multimedial/logoCnum.jpg" alt="Logo" style="width: 80px;">
-            <p>Colegio Naciones Unidas del Mundo<br>Excelencia educativa con valores y tecnología.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Enlaces</h4>
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="propuesta.html">Propuesta Educativa</a></li>
-                <li><a href="niveles.html">Niveles</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="novedades.html">Novedades</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="campus.html">Campus</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Contacto</h4>
-            <p><i class="fas fa-envelope"></i> contacto@num.edu.ar</p>
-            <p><i class="fas fa-phone-alt"></i> +54 11 1234-5678</p>
-        </div>
-        <div class="footer-col">
-            <h4>Seguinos</h4>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p class="contact-item">📧 contacto@num.edu.ar</p>
+        <p class="contact-item">📞 +54 11 1234-5678</p>
+        <p class="contact-item">📍 Remigio Lopez 2257, San Miguel</p>
+      </div>
     </div>
     <div class="footer-bottom">
-        <p>Colegio Naciones Unidas del Mundo - Todos los derechos reservados</p>
+      <p>© 2025 Colegio Naciones Unidas del Mundo. Todos los derechos reservados.</p>
     </div>
-</footer>
+  </footer>
 
-<script src="vista/js/main.js"></script>
 </body>
 </html>
+
