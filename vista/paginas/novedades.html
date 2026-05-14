@@ -1,19 +1,172 @@
-<main class="page-content">
-    <div class="container">
-        <h2>Novedades</h2>
-        <div class="novedades-lista">
-            <article class="noticia">
-                <span class="fecha">📅 7 enero, 2021</span>
-                <h3>Los cambios que prepara la escuela......</h3>
-                <p>Estamos renovando instalaciones, metodologías y recursos tecnológicos para el próximo ciclo lectivo. ¡Pronto más información!</p>
-                <a href="#" class="leer-mas">Leer más →</a>
-            </article>
-            <article class="noticia">
-                <span class="fecha">📅 8 enero, 2021</span>
-                <h3>Horarios de atención de Administración</h3>
-                <p>De Lunes a Viernes hábiles de 8 a 17 hs. Consultas por inscripciones abiertas.</p>
-                <a href="#" class="leer-mas">Leer más →</a>
-            </article>
-        </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novedades | Colegio Naciones Unidas del Mundo</title>
+  <link rel="stylesheet" href="https://vyryn33-cpu.github.io/proyecto-CNUM/vista/estilo/estilo.css" />
+  <style>
+    .novedades-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; align-items: start; }
+    .novedad-card { background: var(--white); border-radius: 6px; overflow: hidden; box-shadow: 0 4px 24px rgba(74,15,28,0.08); border: 1px solid rgba(107,26,42,0.08); margin-bottom: 2rem; transition: transform 0.3s, box-shadow 0.3s; }
+    .novedad-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(74,15,28,0.13); }
+    .novedad-card-top { background: var(--bordo); padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .novedad-card:nth-child(2) .novedad-card-top { background: var(--bordo-light); }
+    .novedad-card:nth-child(3) .novedad-card-top { background: var(--bordo-dark); }
+    .novedad-fecha { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-light); font-weight: 700; }
+    .novedad-tag-label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(201,168,76,0.2); color: var(--gold-light); padding: 0.25rem 0.7rem; border-radius: 12px; }
+    .novedad-card-body { padding: 2rem; }
+    .novedad-card-body h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--bordo-dark); margin-bottom: 0.8rem; line-height: 1.3; }
+    .novedad-card-body p { font-size: 0.92rem; color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem; }
+    .novedad-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bordo); transition: gap 0.2s, color 0.2s; }
+    .novedad-link:hover { gap: 12px; color: var(--bordo-light); }
+    /* Sidebar */
+    .sidebar { position: sticky; top: 90px; }
+    .sidebar-card { background: var(--white); border-radius: 6px; padding: 2rem; box-shadow: 0 4px 24px rgba(74,15,28,0.08); border: 1px solid rgba(107,26,42,0.08); margin-bottom: 2rem; }
+    .sidebar-card h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--bordo-dark); margin-bottom: 1.2rem; padding-bottom: 0.8rem; border-bottom: 2px solid var(--gold); }
+    .horario-item { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0; border-bottom: 1px solid rgba(107,26,42,0.06); font-size: 0.85rem; }
+    .horario-item:last-child { border-bottom: none; }
+    .horario-dia { color: var(--text-mid); }
+    .horario-hora { color: var(--bordo); font-weight: 700; }
+    .sidebar-info p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 0.6rem; }
+    .sidebar-cta { background: var(--bordo); border-radius: 6px; padding: 2rem; text-align: center; }
+    .sidebar-cta p { font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-bottom: 1.2rem; line-height: 1.6; }
+    @media (max-width: 900px) { .novedades-layout { grid-template-columns: 1fr; } .sidebar { position: static; } }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="https://vyrgyn33-cpu.github.io/proyecto-CNUM/vista/multimedial/logoCnum.jpg" alt="Logo CNUM" />
+      <div class="brand-text">
+        <span class="nombre">Colegio Naciones Unidas del Mundo</span>
+        <span class="slogan">Excelencia educativa</span>
+      </div>
     </div>
-</main>
+    <ul class="navbar-links">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="propuesta.html">Propuesta</a></li>
+      <li><a href="niveles.html">Niveles</a></li>
+      <li><a href="proyectos.html">Proyectos</a></li>
+      <li><a href="novedades.html" class="active">Novedades</a></li>
+      <li><a href="campus.html">Campus</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span class="page-eyebrow">Mantente informado</span>
+      <h1>Novedades</h1>
+      <p>Noticias, anuncios e información importante de la comunidad educativa.</p>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="novedades-layout">
+
+      <!-- Noticias -->
+      <div>
+        <span class="section-tag">Últimas noticias</span>
+        <h2 class="section-title">Lo más reciente</h2>
+        <div class="section-divider"></div>
+
+        <div class="novedad-card">
+          <div class="novedad-card-top">
+            <span class="novedad-fecha">📅 7 de enero, 2025</span>
+            <span class="novedad-tag-label">Institucional</span>
+          </div>
+          <div class="novedad-card-body">
+            <h3>Renovación de instalaciones para el nuevo ciclo lectivo</h3>
+            <p>Estamos renovando instalaciones, metodologías y recursos tecnológicos para el próximo ciclo lectivo. Nuevos laboratorios de computación, espacios de robótica y áreas de esparcimiento modernizadas estarán disponibles para toda la comunidad educativa.</p>
+            <a href="#" class="novedad-link">Leer más <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="novedad-card">
+          <div class="novedad-card-top">
+            <span class="novedad-fecha">📅 8 de enero, 2025</span>
+            <span class="novedad-tag-label">Administración</span>
+          </div>
+          <div class="novedad-card-body">
+            <h3>Horarios de atención de Administración</h3>
+            <p>La administración del colegio atiende de lunes a viernes hábiles de 8 a 17 hs. Las consultas por inscripciones para el nuevo ciclo lectivo están abiertas. Podés comunicarte por teléfono, email o acercarte personalmente a la institución.</p>
+            <a href="contacto.html" class="novedad-link">Ir a contacto <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="novedad-card">
+          <div class="novedad-card-top">
+            <span class="novedad-fecha">📅 15 de enero, 2025</span>
+            <span class="novedad-tag-label">Inscripciones</span>
+          </div>
+          <div class="novedad-card-body">
+            <h3>Inscripciones abiertas para el ciclo 2025</h3>
+            <p>Ya están abiertas las inscripciones para todos los niveles. Inicial, Primaria y Secundaria. Acercate a la administración o escribinos para conocer los requisitos, vacantes disponibles y toda la información sobre cuotas y modalidades de pago.</p>
+            <a href="contacto.html" class="novedad-link">Consultar <span>→</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-card">
+          <h4>Horarios de atención</h4>
+          <div class="horario-item"><span class="horario-dia">Lunes a Viernes</span><span class="horario-hora">8 a 17 hs</span></div>
+          <div class="horario-item"><span class="horario-dia">Sábados</span><span class="horario-hora">Cerrado</span></div>
+          <div class="horario-item"><span class="horario-dia">Domingo</span><span class="horario-hora">Cerrado</span></div>
+        </div>
+
+        <div class="sidebar-card sidebar-info">
+          <h4>Información de contacto</h4>
+          <p>📧 contacto@num.edu.ar</p>
+          <p>📞 +54 11 1234-5678</p>
+          <p>📍 Remigio Lopez 2257, San Miguel</p>
+        </div>
+
+        <div class="sidebar-cta">
+          <p>¿Querés recibir las novedades del colegio? Contactanos para más información.</p>
+          <a href="contacto.html" class="btn-gold">Contactar</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-gold-bar"></div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <img src="https://vyrgyn33-cpu.github.io/proyecto-CNUM/vista/multimedial/logoCnum.jpg" alt="Logo CNUM" />
+          <div class="nombre">Colegio Naciones Unidas del Mundo</div>
+        </div>
+        <p>Excelencia educativa con valores, tecnología y compromiso humano.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="propuesta.html">Propuesta Educativa</a></li>
+          <li><a href="niveles.html">Niveles</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="novedades.html">Novedades</a></li>
+          <li><a href="campus.html">Campus</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p class="contact-item">📧 contacto@num.edu.ar</p>
+        <p class="contact-item">📞 +54 11 1234-5678</p>
+        <p class="contact-item">📍 Remigio Lopez 2257, San Miguel</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Colegio Naciones Unidas del Mundo. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
