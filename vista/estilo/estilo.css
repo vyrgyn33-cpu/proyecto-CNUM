@@ -708,7 +708,19 @@ footer {
   0%, 100% { opacity: 0.5; transform: scaleY(1); }
   50%       { opacity: 1;   transform: scaleY(1.15); }
 }
+/* ─── FIXES / CORRECCIONES ────────────────────────────────── */
+body {
+  padding-top: 72px;
+}
 
+.hero {
+  min-height: calc(100vh - 72px);
+}
+
+/* (Opcional) para anclajes internos */
+section, .stats-band, .section, .propuesta-section, .cta-section, footer {
+  scroll-margin-top: 72px;
+}
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media (max-width: 900px) {
   .navbar { padding: 0 1.5rem; }
