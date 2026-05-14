@@ -1,36 +1,201 @@
-<main class="page-content">
-    <div class="container">
-        <h2>Proyectos Especiales</h2>
-        <p><strong>Música - Computación - Arte - Vida en la Naturaleza...</strong></p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos | Colegio Naciones Unidas del Mundo</title>
+  <link rel="stylesheet" href="https://vyrgyn33-cpu.github.io/proyecto+CNUM/vista/estilo/estilo.css" />
+  <style>
+    .proyectos-intro { max-width: 680px; margin-bottom: 4rem; }
+    .proyectos-intro p { font-size: 1rem; color: var(--text-mid); line-height: 1.8; }
+    .proyectos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 5rem; }
+    .proyecto-card { background: var(--white); border-radius: 6px; overflow: hidden; box-shadow: 0 4px 24px rgba(74,15,28,0.08); border: 1px solid rgba(107,26,42,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+    .proyecto-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(74,15,28,0.14); }
+    .proyecto-top { padding: 2.5rem 2rem 2rem; position: relative; overflow: hidden; }
+    .proyecto-card:nth-child(1) .proyecto-top { background: var(--bordo); }
+    .proyecto-card:nth-child(2) .proyecto-top { background: var(--bordo-light); }
+    .proyecto-card:nth-child(3) .proyecto-top { background: var(--bordo-dark); }
+    .proyecto-card:nth-child(4) .proyecto-top { background: #5A4A2A; }
+    .proyecto-card:nth-child(5) .proyecto-top { background: #2A3A5A; }
+    .proyecto-card:nth-child(6) .proyecto-top { background: #2A5A3A; }
+    .proyecto-top::after { content: ''; position: absolute; right: -15px; top: -15px; width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.07); }
+    .proyecto-icon { font-size: 2.4rem; margin-bottom: 0.7rem; }
+    .proyecto-top h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--white); }
+    .proyecto-body { padding: 1.6rem 2rem; }
+    .proyecto-body p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; }
+    .especiales-section { background: var(--bordo-dark); border-radius: 8px; padding: 4rem; position: relative; overflow: hidden; }
+    .especiales-section::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(201,168,76,0.04) 40px, rgba(201,168,76,0.04) 41px); }
+    .especiales-section > * { position: relative; z-index: 1; }
+    .especiales-section .section-tag { color: var(--gold-light); }
+    .especiales-section .section-title { color: var(--white); }
+    .especiales-section .section-divider { margin: 1rem 0 2.5rem; }
+    .especiales-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem; }
+    .especial-item { background: rgba(255,255,255,0.05); border: 1px solid rgba(201,168,76,0.2); border-left: 3px solid var(--gold); border-radius: 4px; padding: 1.5rem; transition: background 0.2s; }
+    .especial-item:hover { background: rgba(201,168,76,0.08); }
+    .especial-item h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+    .especial-item p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+    @media (max-width: 900px) { .proyectos-grid { grid-template-columns: 1fr; } .especiales-grid { grid-template-columns: 1fr; } .especiales-section { padding: 2.5rem 1.5rem; } }
+  </style>
+</head>
+<body>
 
-        <div class="proyectos-lista">
-            <div class="proyecto">
-                <h3>Música</h3>
-                <p>Desarrollo de la sensibilidad artística a través del canto, instrumentos y expresión corporal.</p>
-            </div>
-            <div class="proyecto">
-                <h3>Computación</h3>
-                <p>Artículos con áreas curriculares para el desarrollo de tareas.</p>
-            </div>
-            <div class="proyecto">
-                <h3>Arte</h3>
-                <p>Plástica, diseño, dibujo y creatividad aplicada a todas las materias.</p>
-            </div>
-            <div class="proyecto">
-                <h3>Vida en la Naturaleza</h3>
-                <p>Huerta escolar, reciclaje, concientización ecológica y actividades al aire libre.</p>
-            </div>
-        </div>
-
-        <div class="info-adicional">
-            <div class="info-block">
-                <h4>Informática</h4>
-                <p>Artículos con áreas curriculares para el desarrollo de tareas.</p>
-            </div>
-            <div class="info-block">
-                <h4>Prácticas de Oficina</h4>
-                <p>Desarrollo de actividades para incorporar habilidades informáticas para desarrollar en el futuro campo laboral.</p>
-            </div>
-        </div>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="https://vyrgyn33-cpu.github.io/proyecto-CNUM/vista/multimedial/logoCnum.jpg" alt="Logo CNUM" />
+      <div class="brand-text">
+        <span class="nombre">Colegio Naciones Unidas del Mundo</span>
+        <span class="slogan">Excelencia educativa</span>
+      </div>
     </div>
-</main>
+    <ul class="navbar-links">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="propuesta.html">Propuesta</a></li>
+      <li><a href="niveles.html">Niveles</a></li>
+      <li><a href="proyectos.html" class="active">Proyectos</a></li>
+      <li><a href="novedades.html">Novedades</a></li>
+      <li><a href="campus.html">Campus</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span class="page-eyebrow">Creatividad en acción</span>
+      <h1>Proyectos Especiales</h1>
+      <p>Música, computación, arte y vida en la naturaleza: experiencias que enriquecen la formación integral.</p>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+
+  <div class="page-content">
+
+    <div class="proyectos-intro">
+      <span class="section-tag">Nuestros proyectos</span>
+      <h2 class="section-title">Más allá del aula</h2>
+      <div class="section-divider"></div>
+      <p>Los proyectos especiales del CNUM complementan la formación académica con experiencias prácticas, creativas y colaborativas que despiertan la curiosidad y el talento de cada alumno.</p>
+    </div>
+
+    <div class="proyectos-grid">
+      <div class="proyecto-card">
+        <div class="proyecto-top">
+          <div class="proyecto-icon">🎵</div>
+          <h3>Música</h3>
+        </div>
+        <div class="proyecto-body">
+          <p>Desarrollo de la sensibilidad artística a través del canto, instrumentos y expresión corporal. Participación en festivales y actos escolares.</p>
+        </div>
+      </div>
+
+      <div class="proyecto-card">
+        <div class="proyecto-top">
+          <div class="proyecto-icon">💻</div>
+          <h3>Computación</h3>
+        </div>
+        <div class="proyecto-body">
+          <p>Articulación con áreas curriculares para el desarrollo de tareas. Programación, ofimática y herramientas digitales para el aprendizaje.</p>
+        </div>
+      </div>
+
+      <div class="proyecto-card">
+        <div class="proyecto-top">
+          <div class="proyecto-icon">🎨</div>
+          <h3>Arte</h3>
+        </div>
+        <div class="proyecto-body">
+          <p>Plástica, diseño, dibujo y creatividad aplicada a todas las materias. Exposiciones de trabajos y proyectos artísticos interdisciplinarios.</p>
+        </div>
+      </div>
+
+      <div class="proyecto-card">
+        <div class="proyecto-top">
+          <div class="proyecto-icon">🌿</div>
+          <h3>Vida en la Naturaleza</h3>
+        </div>
+        <div class="proyecto-body">
+          <p>Huerta escolar, reciclaje, concientización ecológica y actividades al aire libre que fomentan el cuidado del medio ambiente.</p>
+        </div>
+      </div>
+
+      <div class="proyecto-card">
+        <div class="proyecto-top">
+          <div class="proyecto-icon">🤖</div>
+          <h3>Robótica</h3>
+        </div>
+        <div class="proyecto-body">
+          <p>Construcción y programación de robots desde el nivel inicial hasta el secundario. Participación en competencias intercolegiales de robótica.</p>
+        </div>
+      </div>
+
+      <div class="proyecto-card">
+        <div class="proyecto-top">
+          <div class="proyecto-icon">⚽</div>
+          <h3>Deportes</h3>
+        </div>
+        <div class="proyecto-body">
+          <p>Competencias intercolegiales, trabajo en equipo y vida saludable. Fútbol, vóley, básquet y atletismo como parte del desarrollo integral.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="especiales-section">
+      <span class="section-tag">Formación técnica</span>
+      <h2 class="section-title">Proyectos de Orientación Laboral</h2>
+      <div class="section-divider"></div>
+      <div class="especiales-grid">
+        <div class="especial-item">
+          <h4>Informática Aplicada</h4>
+          <p>Articulación con áreas curriculares para el desarrollo de competencias digitales orientadas al mundo laboral y académico.</p>
+        </div>
+        <div class="especial-item">
+          <h4>Prácticas de Oficina</h4>
+          <p>Desarrollo de actividades para incorporar habilidades informáticas y administrativas aplicables al futuro campo laboral.</p>
+        </div>
+        <div class="especial-item">
+          <h4>Prácticas Profesionalizantes</h4>
+          <p>Experiencias en contextos reales de trabajo que conectan los aprendizajes escolares con los requerimientos del mercado.</p>
+        </div>
+        <div class="especial-item">
+          <h4>Emprendedurismo</h4>
+          <p>Desarrollo del pensamiento innovador, la creatividad y las habilidades para idear, planificar y llevar adelante proyectos propios.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-gold-bar"></div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <img src="https://vyrgyn33-cpu.github.io/proyecto-CNUM/vista/multimedial/logoCnum.jpg" alt="Logo CNUM" />
+          <div class="nombre">Colegio Naciones Unidas del Mundo</div>
+        </div>
+        <p>Excelencia educativa con valores, tecnología y compromiso humano.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="propuesta.html">Propuesta Educativa</a></li>
+          <li><a href="niveles.html">Niveles</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="novedades.html">Novedades</a></li>
+          <li><a href="campus.html">Campus</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p class="contact-item">📧 contacto@num.edu.ar</p>
+        <p class="contact-item">📞 +54 11 1234-5678</p>
+        <p class="contact-item">📍 Remigio Lopez 2257, San Miguel</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Colegio Naciones Unidas del Mundo. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
